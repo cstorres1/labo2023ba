@@ -11,7 +11,7 @@ require("parallel")
 
 PARAM <- list()
 # reemplazar por las propias semillas
-PARAM$semillas <- c(102191, 200177, 410551, 552581, 892237)
+PARAM$semillas <- c(986177, 793069, 793301, 823177, 992441)
 
 #------------------------------------------------------------------------------
 # particionar agrega una columna llamada fold a un dataset
@@ -122,8 +122,10 @@ cat(
 
 for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
   for (vmin_split in c(1000, 800, 600, 400, 200, 100, 50, 20, 10)) {
+    for (vmin_bucket in c(500,250,100, 50, 25)) {
+      for (vcp in c(-0.5,-0.4, -0.3,-0.2 -0.1)) {
     # notar como se agrega
-
+    
     # vminsplit  minima cantidad de registros en un nodo para hacer el split
     param_basicos <- list(
       "cp" = -0.5, # complejidad minima
@@ -131,10 +133,10 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
       "minbucket" = 5, # minima cantidad de registros en una hoja
       "maxdepth" = vmax_depth
     ) # profundidad máxima del arbol
-
+    
     # Un solo llamado, con la semilla 17
     ganancia_promedio <- ArbolesMontecarlo(ksemillas, param_basicos)
-
+    
     # escribo los resultados al archivo de salida
     cat(
       file = archivo_salida,
@@ -144,5 +146,8 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
       vmin_split, "\t",
       ganancia_promedio, "\n"
     )
+  
+      }
+    }
   }
 }
