@@ -115,7 +115,7 @@ cat(
   "vcp", "\t",
   "max_depth", "\t",
   "min_split", "\t",
-  "min_bucket","\t"
+  "min_bucket", "\t",
   "ganancia_promedio", "\n"
 )
 
@@ -144,11 +144,11 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
       file = archivo_salida,
       append = TRUE,
       sep = "",
-      vcp,"\t",
+      vcp, "\t",
       vmax_depth, "\t",
       vmin_split, "\t",
-      vmin_bucket,"\t"
-      ganancia_promedio, "\n"
+      vmin_bucket, "\t",
+      ganancia_promedio, "\n",
     )
   
       }
