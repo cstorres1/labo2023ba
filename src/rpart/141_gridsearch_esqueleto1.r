@@ -124,8 +124,8 @@ cat(
 
 for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
   for (vmin_split in c(1000, 800, 600, 400, 200, 100, 50, 20, 10)) {
-    for (vmin_bucket in c(500,250,100, 50, 25)) {
-      for (vcp in c(-0.5,-0.4, -0.3,-0.2 -0.1)) {
+    for (vmin_bucket in c(500, 250, 100, 50, 25)) {
+      for (vcp in c(-0.5, -0.4, -0.3, -0.2, -0.1)) {
     # notar como se agrega
     
     # vminsplit  minima cantidad de registros en un nodo para hacer el split
@@ -139,18 +139,17 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
     # Un solo llamado, con la semilla 17
     ganancia_promedio <- ArbolesMontecarlo(PARAM$semillas, param_basicos)
     
-    # escribo los resultados al archivo de salida
-    cat(
-      file = archivo_salida,
-      append = TRUE,
-      sep = "",
-      vcp, "\t",
-      vmax_depth, "\t",
-      vmin_split, "\t",
-      vmin_bucket, "\t",
-      ganancia_promedio, "\n",
-    )
-  
+        # escribo los resultados al archivo de salida
+        cat(
+          file = archivo_salida,
+          append = TRUE,
+          sep = "",
+          vcp, "\t",
+          vmax_depth, "\t",
+          vmin_split, "\t",
+          vmin_bucket, "\t",
+          ganancia_promedio, "\n"
+        );
       }
     }
   }
