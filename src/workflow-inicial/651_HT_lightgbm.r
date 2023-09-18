@@ -34,7 +34,7 @@ PARAM$exp_input <- "TS6410"
 # En caso que se haga cross validation, se usa esta cantidad de folds
 PARAM$lgb_crossvalidation_folds <- 5
 
-PARAM$lgb_semilla <- 986177 # cambiar por su propia semilla
+PARAM$lgb_semilla <- 694061 # cambiar por su propia semilla
 
 
 # Hiperparametros FIJOS de  lightgbm
