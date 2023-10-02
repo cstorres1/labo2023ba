@@ -17,31 +17,31 @@ require("lightgbm")
 
 # Parametros del script
 PARAM <- list()
-PARAM$experimento <- "F1_FE6310"
+PARAM$experimento <- "F2_FE6310"
 
 PARAM$exp_input <- "F1_DR6210"
 
-PARAM$lag1 <- TRUE
+PARAM$lag1 <- FALSE
 PARAM$lag2 <- TRUE
 PARAM$lag3 <- TRUE
 
 PARAM$Tendencias1$run <- TRUE
-PARAM$Tendencias1$ventana <- 2
+PARAM$Tendencias1$ventana <- 6
 PARAM$Tendencias1$tendencia <- TRUE
-PARAM$Tendencias1$minimo <- TRUE
-PARAM$Tendencias1$maximo <- TRUE
+PARAM$Tendencias1$minimo <- FALSE
+PARAM$Tendencias1$maximo <- FALSE
 PARAM$Tendencias1$promedio <- TRUE
-PARAM$Tendencias1$ratioavg <- TRUE
-PARAM$Tendencias1$ratiomax <- TRUE
+PARAM$Tendencias1$ratioavg <- FALSE
+PARAM$Tendencias1$ratiomax <- FALSE
 
 PARAM$Tendencias2$run <- TRUE
-PARAM$Tendencias2$ventana <- 3
+PARAM$Tendencias2$ventana <- 12
 PARAM$Tendencias2$tendencia <- TRUE
-PARAM$Tendencias2$minimo <- TRUE
+PARAM$Tendencias2$minimo <- FALSE
 PARAM$Tendencias2$maximo <- TRUE
-PARAM$Tendencias2$promedio <- TRUE
-PARAM$Tendencias2$ratioavg <- TRUE
-PARAM$Tendencias2$ratiomax <- TRUE
+PARAM$Tendencias2$promedio <- FALSE
+PARAM$Tendencias2$ratioavg <- FALSE
+PARAM$Tendencias2$ratiomax <- FALSE
 
 
 PARAM$RandomForest$run <- TRUE
